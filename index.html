@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Get Current Time</title>
+</head>
+<body>
+
+    <h1>Current Time</h1>
+    <h3 id="time">00:00:00</h3>
+
+<script>
+
+    var dateToday = new Date();
+    let addZeroes = (num) => {
+        return num < 10 ? `0${num}` : num;
+    }
+
+    let hr = addZeroes(dateToday.getHours());
+    let min = addZeroes(dateToday.getMinutes());
+    let sec = addZeroes(dateToday.getSeconds());
+
+    document.getElementById("time").textContent = 
+    `${hr}:${min}:${sec}`;
+
+</script>
+    
+</body>
+</html>
